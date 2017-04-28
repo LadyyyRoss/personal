@@ -19,3 +19,4 @@ const Route = use('Route')
 
 Route.on('/').render('welcome')
 Route.on('/blog').render('public/blog/index.html')
+Route.on('/resume').render('resume')

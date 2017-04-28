@@ -5,17 +5,49 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
+  <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+
   <title>AdonisJs - Node.Js MVC Framework</title>
 
   <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,200,300,600,700,900' rel='stylesheet' type='text/css'>
   <link rel="icon" href="/assets/favicon.png" type="image/x-icon">
   <link rel="stylesheet" type="text/css" href="style.css">
   <link href="https://fonts.googleapis.com/css?family=Amatic+SC|Raleway" rel="stylesheet">
-  <script src="vue.js"></script>
+  <link rel="stylesheet" type="text/css" href="animate.css">
+  <script src="http://cdn.bootcss.com/jquery/1.11.3/jquery.js"></script>
+  <script src="http://cdn.bootcss.com/jquery/1.11.3/jquery.js"></script>
+  <script type='text/javascript' src='js/jquery.particleground.js'></script>
+  <script src="js/animations.js"></script>
+  <script>
+    $( document ).ready(function() {
+      $('#span1').cycleText();
+    });
+
+    $(document).ready(function() {
+      $('#particles').particleground({
+        dotColor: '#B9B9B9',
+        lineColor: '#B9B9B9'
+      });
+    });
+  </script>
   <style>
     body {
       font-family: 'Raleway', sans-serif;
     }
+    .topright {
+      position: absolute;
+      top: 8px;
+      right: 16px;
+      font-size: 18px;
+    }
+    .topleft {
+      position: absolute;
+      top: 8px;
+      left: 16px;
+      font-size: 18px;
+    }
+
+
   </style>
 </head>
 <body>
@@ -24,20 +56,6 @@
     <div class="__wrapper">
       {% block content %}{% endblock %}
 
-      {% block footer %}
-        <div class="__footer">
-          <ul>
-            <li>
-              <a href="https://twitter.com/intent/tweet?url=http://adonisjs.com&text=I am using AdonisJs, a practical MVC framework for nodejs&hashtags=nodejs,adonisframework" target="_blank">
-                <img src="/assets/twitter.svg">
-              </a>
-            </li>
-            <li>
-              <a href="https://github.com/adonisjs/adonis-framework" target="_blank"><img src="/assets/github.svg"></a>
-            </li>
-          </ul>
-        </div>
-      {% endblock %}
     </div>
   </section>
 
